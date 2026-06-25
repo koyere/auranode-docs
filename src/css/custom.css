@@ -1,0 +1,27 @@
+/**
+ * Global styles. Brand color: AuraNode amber (#F7B324).
+ */
+
+:root {
+  --ifm-color-primary: #b9791a;
+  --ifm-color-primary-dark: #a76d17;
+  --ifm-color-primary-darker: #9d6716;
+  --ifm-color-primary-darkest: #825512;
+  --ifm-color-primary-light: #cf8a22;
+  --ifm-color-primary-lighter: #db9325;
+  --ifm-color-primary-lightest: #e7a338;
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+}
+
+/* Lighter amber in dark mode for contrast. */
+[data-theme='dark'] {
+  --ifm-color-primary: #f7b324;
+  --ifm-color-primary-dark: #f0a808;
+  --ifm-color-primary-darker: #e29e07;
+  --ifm-color-primary-darkest: #ba8206;
+  --ifm-color-primary-light: #f8bd43;
+  --ifm-color-primary-lighter: #f9c253;
+  --ifm-color-primary-lightest: #fbd285;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+}
