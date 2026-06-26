@@ -5,7 +5,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 const config = {
   title: 'AuraNode Docs',
   tagline: 'Multi-server control with a lightweight agent — live metrics, web terminal, secure tunnels, server-to-server migrations and AI.',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/auranode-favicon.ico',
 
   future: {
     v4: true,
@@ -51,13 +51,20 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      image: 'img/docusaurus-social-card.jpg',
+      image: 'img/auranode-social-card.png',
       colorMode: {
         defaultMode: 'dark',
         respectPrefersColorScheme: true,
       },
       navbar: {
         title: 'AuraNode Docs',
+        logo: {
+          alt: 'AuraNode',
+          src: 'img/auranode-mark.svg',
+          srcDark: 'img/auranode-mark-dark.svg',
+          width: 28,
+          height: 28,
+        },
         items: [
           {
             type: 'docSidebar',

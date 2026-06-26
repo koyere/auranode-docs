@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120" fill="none">
+  <defs>
+    <linearGradient id="anhex" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FBC02D"/>
+      <stop offset="100%" stop-color="#F59E0B"/>
+    </linearGradient>
+  </defs>
+  <g stroke="#5b6068" stroke-width="3.4" stroke-linecap="round">
+    <line x1="32" y1="60" x2="13" y2="60"/>
+    <line x1="71" y1="37.5" x2="92" y2="21"/>
+    <line x1="71" y1="82.5" x2="92" y2="99"/>
+  </g>
+  <g stroke="#5b6068" stroke-width="3.2" fill="#ffffff">
+    <circle cx="8" cy="60" r="4.3"/>
+    <circle cx="96" cy="18" r="4.3"/>
+    <circle cx="96" cy="102" r="4.3"/>
+  </g>
+  <path d="M84 60 L71 82.5 L45 82.5 L32 60 L45 37.5 L71 37.5 Z" fill="url(#anhex)"/>
+</svg>
