@@ -8,7 +8,7 @@ const sidebars = {
       type: 'category',
       label: 'Agent',
       collapsed: false,
-      items: ['agent/overview', 'agent/install', 'agent/service', 'agent/privileged', 'agent/updates'],
+      items: ['agent/overview', 'agent/install', 'agent/service', 'agent/privileged', 'agent/updates', 'agent/troubleshooting'],
     },
     'cli',
     {
