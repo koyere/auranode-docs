@@ -45,6 +45,27 @@ There is currently no agent for Windows or macOS.
 - **Tunnels & migrations** — see [Tunnels](/guides/tunnels) and [Migrations](/guides/migrations).
 - **Local buffering** — metrics/logs are buffered to a small embedded database so nothing
   is lost across brief disconnects.
+- **System health** — a low‑frequency, read‑only snapshot surfaced per server in the panel
+  (see below).
+
+## System health
+
+Besides live metrics, the agent reports a **system health snapshot** on connect and then
+once an hour. It is shown per server in the panel (**Servers → your server → System
+health**). Every signal is **read‑only** — the agent only reads state, it never installs
+updates, reboots, kills processes or changes services.
+
+| Signal | Source | Notes |
+| --- | --- | --- |
+| **Pending updates** (and how many are **security**) | `update-notifier`'s `apt-check` | Debian/Ubuntu only; skipped where the tool isn't present |
+| **Reboot required** | `/var/run/reboot-required` | Set by package upgrades that need a restart |
+| **Zombie processes** | process table | Count of processes in the `Z` state |
+| **Failed services** | `systemctl list-units --state=failed` | Count of failed systemd units |
+
+The snapshot needs no elevated privileges — it is collected as the agent's unprivileged
+user. Acting on any of it (applying updates, rebooting, restarting a unit) is always done
+by you on the server; see [Updating the agent](/agent/updates) and
+[Troubleshooting](/agent/troubleshooting).
 
 ## Hardening
 
